@@ -3,6 +3,7 @@ website/local_settings.py
 
 # Development database
 *.sqlite3
+*.sqlite
 *.db
 
 # Byte-compiled / optimized / DLL files
