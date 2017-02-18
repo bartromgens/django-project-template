@@ -13,6 +13,7 @@ INSTALLED_APPS = [
     'website',
     'exampleapp',
     'bootstrap3',
+    'registration',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -82,6 +83,16 @@ USE_L10N = True
 USE_TZ = True
 
 INTERNAL_IPS = ['127.0.0.1']  # needed for django-debug-toolbar
+
+# Login
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/'
+
+
+# django-dual-authentication
+AUTHENTICATION_BACKENDS = ['django-dual-authentication.backends.DualAuthentication']
+# You can authenticate your users by 'username', 'email', 'both'. Default: 'both'.
+AUTHENTICATION_METHOD = 'both'
 
 
 # Local settings

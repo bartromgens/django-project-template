@@ -1,2 +1,4 @@
 django==1.10.5
 django-bootstrap3==8.1.0
+django-registration-redux==1.4
+django-dual-authentication==1.0.0

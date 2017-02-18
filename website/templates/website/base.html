@@ -48,6 +48,15 @@
           <li><a href="/">MenuItem2</a></li>
 
         </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          {% if user.is_authenticated %}
+            <li><a href="/accounts/logout"><b>Log out</b></a></li>
+          {% else %}
+            <li><a href="/accounts/login"><b>Log in</b></a></li>
+            <li><a href="/accounts/register"><b>Sign up</b></a></li>
+          {% endif %}
+        </ul>
       </div>
 
     </div>

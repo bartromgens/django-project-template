@@ -1,4 +1,6 @@
-# user settings, included in settings.py
+"""
+local settings, included in settings.py
+"""
 
 import os
 
@@ -33,3 +35,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'website/static/media/')
 
 #MEDIA_URL = '//www.<your-domain>.com/static/media/'
 MEDIA_URL = '/static/media/'
+
+
+# Login and Registration
+REGISTRATION_OPEN = True
