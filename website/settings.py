@@ -80,3 +80,10 @@ USE_L10N = True
 USE_TZ = True
 
 INTERNAL_IPS = ['127.0.0.1']  # needed for django-debug-toolbar
+
+
+# Local settings
+# Allow any settings to be defined in local_settings.py which should be
+# ignored in your version control system allowing for settings to be
+# defined per machine.
+from website.local_settings import *
