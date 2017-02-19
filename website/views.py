@@ -10,6 +10,11 @@ class UserProfileView(SuccessMessageMixin, UpdateView):
     fields = ['username', 'first_name', 'last_name', 'email']
     success_message = 'Userprofile saved'
 
+    def get_context_data(self, **kwargs):
+        if not self.request.user == self.get_object():
+            raise PermissionDenied
+        return super().get_context_data(**kwargs)
+
     def form_valid(self, form):
         if self.request.user != form.instance:
             raise PermissionDenied
