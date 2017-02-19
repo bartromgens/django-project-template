@@ -9,7 +9,7 @@ from website.views import UserProfileView
 
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='website/index.html'), name='homepage'),
-    url(r'^userprofile/(?P<pk>[0-9]+)/$', login_required(UserProfileView.as_view())),
+    url(r'^userprofile/(?P<pk>[0-9]+)/$', login_required(UserProfileView.as_view()), name='userprofile'),
 
     url(r'^accounts/', include('registration.backends.simple.urls')),  # the django-registration module
 
