@@ -1,6 +1,6 @@
 # django-project-template
 
-django-project-template is an example Django + bootstrap project with all the basics configured. 
+django-project-template is an example Django + bootstrap project with a basic project configuration that I often use. 
 
 Requires Python 3.4+ and Django 1.10+
 
@@ -8,19 +8,20 @@ Requires Python 3.4+ and Django 1.10+
 
 - Django 1.10 and Bootstrap 3 
 - Example Django app
-- base page template with,
-  - brand
-  - top navbar
-  - footer
+- Base page template with,
+  - Brand
+  - Top navbar
+  - Footer
 - Sign up/log in (by username or email)
 - Reset/change password
 - Update userprofile
 - django-debug-toolbar
-
-TODO,
-- logging
-- backup
-- create/load demo data
-- basic tests
 - travis-ci config
 - coveralls config
+
+TODO,
+- Logging
+- Daily backups
+- Create/load demo data
+- Basic tests
+- Instructions

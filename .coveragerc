@@ -1,0 +1,12 @@
+[run]
+source = website, exampleapp
+
+[report]
+omit =
+    */migrations/*
+    */apps.py
+    */management/commands/*.py
+    */cron.py
+    website/local_settings_example.py
+    website/local_settings.py
+    website/wsgi.py
