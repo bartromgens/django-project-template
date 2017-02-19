@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/bartromgens/django-project-template.svg?branch=master)](https://travis-ci.org/bartromgens/django-project-template) [![Coverage Status](https://coveralls.io/repos/github/bartromgens/django-project-template/badge.svg?branch=master)](https://coveralls.io/github/bartromgens/django-project-template?branch=master)
 # django-project-template
 
 django-project-template is an example Django + bootstrap project with a basic project configuration that I often use. 
