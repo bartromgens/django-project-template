@@ -32,7 +32,7 @@ Requires Python 3.4+ and Django 1.10+
 
 Get the code and enter the project directory,
 ```
-$ git clone https://github.com/django-project-template/django-project-template.git
+$ git clone https://github.com/bartromgens/django-project-template.git
 $ cd django-project-template
 ```
 
