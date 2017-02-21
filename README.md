@@ -91,7 +91,7 @@ $ python manage.py test website.test.TestCaseAdminLogin
 
 ## Logging
 There are 3 log files (`debug.log`, `error.log`, `django.log`) available, with different log levels and for different applications.
-The log files are found in the `log\` directory of the project.
+The log files are found in the `log` directory of the project.
 The log statements contain the time, log level, file, class, function name and line. 
 
 The log something, create a logger at the top of you python file,
