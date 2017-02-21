@@ -37,7 +37,7 @@ $ git clone https://github.com/django-project-template/django-project-template.g
 $ cd django-project-template
 ```
 
-Install in a local environment (creates a Python 3 virtualenv with dependencies, and a sqlite database file),
+Install via the install script (creates a Python 3 virtualenv with dependencies, a local_settings.py file, and a sqlite database),
 ```
 $ ./install.sh
 ```
@@ -47,13 +47,13 @@ Activate the virtualenv (always do this before working on the project),
 $ source env/bin/activate
 ```
 
-### Create a superuser (optional)
+#### Create a superuser (optional)
 This allows you to login at the website as superuser and view the admin page,
 ```
 $ python manage.py createsuperuser
 ```
 
-### Run a developement webserver
+#### Run a developement webserver
 Run the Django dev web server in the virtualenv (don't forget to active the virtualenv),
 ```
 (env)$ python manage.py runserver
@@ -74,7 +74,6 @@ $ crontab -e
 
 ## Testing
 
-#### Run tests
 Run all tests,
 ```
 $ python manage.py test
