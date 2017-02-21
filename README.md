@@ -25,7 +25,7 @@ Requires Python 3.4+ and Django 1.10+
 - coveralls config
 - django-debug-toolbar
 
-#### TODO,
+#### TODO
 - Create/load demo data
 
 ## Installation (Linux)
@@ -87,4 +87,23 @@ $ python manage.py test
 Run specific tests (example),
 ```
 $ python manage.py test website.test.TestCaseAdminLogin
+```
+
+## Logging
+There are 3 log files available, with different log levels and for different applications.
+The log files are found in the 'log\' directory of the project.
+The log statements contain the time, log level, file, class, function name and line. 
+
+The log something, create a logger at the top of you python file,
+```python
+import logging
+logger = logging.getLogger(__name__)
+```
+then create a log statement as follows,
+```python
+logger.info('an info log message')
+logger.debug('an info log message')
+logger.warning('a warning log message')
+logger.error('a error log message')
+logger.exception(exception_object)
 ```
