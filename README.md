@@ -10,8 +10,8 @@ Requires Python 3.4+ and Django 1.10+
 - Django 1.10 and Bootstrap 3 
 - Example Django app
 - Base page template with,
-  - Brand
-  - Top navbar
+  - Top navbar with brand and menu
+  - Page content
   - Footer
 - Sign up/log in (by username or email)
 - Reset/change password
@@ -19,12 +19,12 @@ Requires Python 3.4+ and Django 1.10+
 - About, Contact, Contribute page templates
 - travis-ci config
 - coveralls config
-- version as global context variable
+- Version as global context variable
 - django-debug-toolbar
+- Basic tests
+- Logging
 
 TODO,
-- Logging
 - Daily backups
 - Create/load demo data
-- Basic tests
 - Instructions

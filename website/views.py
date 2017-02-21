@@ -1,7 +1,11 @@
+import logging
+
 from django.core.exceptions import PermissionDenied
 from django.contrib.auth.models import User
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import TemplateView, UpdateView
+
+logger = logging.getLogger(__name__)
 
 
 class UserProfileView(SuccessMessageMixin, UpdateView):
@@ -22,6 +26,7 @@ class UserProfileView(SuccessMessageMixin, UpdateView):
         users = User.objects.exclude(id=self.request.user.id).filter(email=email)
         if users.exists():
             form.add_error('email', 'Email is already used by another user.')
+            logger.info('email is already used by another user')
             return self.form_invalid(form)
         return super().form_valid(form)
 
