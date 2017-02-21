@@ -25,7 +25,7 @@ Requires Python 3.4+ and Django 1.10+
 - coveralls config
 - django-debug-toolbar
 
-TODO,
+#### TODO,
 - Create/load demo data
 
 ## Installation (Linux)
@@ -65,11 +65,12 @@ The website is now available at http://127.0.0.1:8000 and admin http://127.0.0.1
 #### local_settings.py
 
 The local settings are defined in `website/local_settings.py`. 
-These are no under version control and you are free change these for your personal needs.
+These are not under version control and you are free change these for your personal needs.
+This is also the place for secret settings. An example, on which this file is based, is found in `website/local_settings_example.py`.
 
 #### Daily backups (cronjob)
-This project has a django-cronjob that makes daily backups. 
-These are defined in `website/cron.py`.  
+This project has a django-cronjob that makes daily backups of the raw database (includes everyting), and a json dump of the data,
+These are defined in `website/cron.py`. The location of the backup files is defined in `website/local_settings.py`. 
 Create the following cronjob (Linux) to kickstart the `django-cron` jobs,
 ```
 $ crontab -e
