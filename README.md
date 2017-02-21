@@ -8,7 +8,7 @@ Requires Python 3.4+ and Django 1.10+
 #### Configuration
 
 - Django 1.10 and Bootstrap 3 
-- Example Django app
+- Example Django app, with empty views.py and models.py
 - Base page template with,
   - Top navbar with menu, sign up/log in, and user profile
   - Page content
@@ -27,7 +27,6 @@ Requires Python 3.4+ and Django 1.10+
 
 TODO,
 - Create/load demo data
-- Instructions
 
 ## Installation (Linux)
 
@@ -50,7 +49,7 @@ $ source env/bin/activate
 #### Create a superuser (optional)
 This allows you to login at the website as superuser and view the admin page,
 ```
-$ python manage.py createsuperuser
+(env)$ python manage.py createsuperuser
 ```
 
 #### Run a developement webserver
@@ -61,7 +60,12 @@ Run the Django dev web server in the virtualenv (don't forget to active the virt
 
 The website is now available at http://127.0.0.1:8000 and admin http://127.0.0.1:8000/admin.
 
-### Configuration (optional)
+## Configuration (optional)
+
+#### local_settings.py
+
+The local settings are defined in `website/local_settings.py`. 
+These are no under version control and you are free change these for your personal needs.
 
 #### Daily backups (cronjob)
 This project has a django-cronjob that makes daily backups. 
@@ -69,7 +73,7 @@ These are defined in `website/cron.py`.
 Create the following cronjob (Linux) to kickstart the `django-cron` jobs,
 ```
 $ crontab -e
-*/5 * * * * source /home/<username>/.bashrc && source /home/<path-to-openkamer>/openkamer/env/bin/activate && python /home/<path-to-openkamer>/website/manage.py runcrons > /home/<path-to-openkamer>/log/cronjob.log
+*/5 * * * * source /home/<username>/.bashrc && source /home/<path-to-project>/env/bin/activate && python /home/<path-to-project>/website/manage.py runcrons > /home/<path-to-project>/log/cronjob.log
 ```
 
 ## Testing
