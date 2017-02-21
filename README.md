@@ -16,9 +16,11 @@ Requires Python 3.4+ and Django 1.10+
 - Sign up/log in (by username or email)
 - Reset/change password
 - Update userprofile
-- django-debug-toolbar
+- About, Contact, Contribute page templates
 - travis-ci config
 - coveralls config
+- version as global context variable
+- django-debug-toolbar
 
 TODO,
 - Logging
