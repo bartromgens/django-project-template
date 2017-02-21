@@ -5,7 +5,18 @@ from django.contrib.auth.models import User
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import TemplateView, UpdateView
 
+from website import settings
+
 logger = logging.getLogger(__name__)
+
+
+class ContactView(TemplateView):
+    template_name = 'website/contact.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['contact_email'] = settings.CONTACT_EMAIL
+        return context
 
 
 class UserProfileView(SuccessMessageMixin, UpdateView):

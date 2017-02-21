@@ -39,3 +39,7 @@ MEDIA_URL = '/static/media/'
 
 # Login and Registration
 REGISTRATION_OPEN = True
+
+
+# Contact details
+CONTACT_EMAIL = 'info@example.com'
