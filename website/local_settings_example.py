@@ -43,3 +43,14 @@ REGISTRATION_OPEN = True
 
 # Contact details
 CONTACT_EMAIL = 'info@example.com'
+
+
+# DBBACKUP
+DBBACKUP_STORAGE = 'django.core.files.storage.FileSystemStorage'
+DBBACKUP_STORAGE_OPTIONS = {'location': os.path.join(BASE_DIR, 'backup/')}
+
+
+# DJANGO-CRON
+CRON_CLASSES = [
+    'website.cron.BackupDaily',
+]
