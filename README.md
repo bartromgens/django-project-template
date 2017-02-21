@@ -101,8 +101,8 @@ logger = logging.getLogger(__name__)
 ```
 then create a log statement as follows,
 ```python
-logger.info('an info log message')
 logger.debug('an info log message')
+logger.info('an info log message')
 logger.warning('a warning log message')
 logger.error('a error log message')
 logger.exception(exception_object)
