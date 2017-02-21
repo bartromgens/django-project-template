@@ -29,8 +29,6 @@ TODO,
 - Create/load demo data
 - Instructions
 
-## Installation
-
 ## Installation (Linux)
 
 Get the code and enter the project directory,
