@@ -1,0 +1,17 @@
+  <footer id="base-footer" class="footer">
+    <hr/>
+    <div class="row" align="center">
+      <div class="col-sm-1 col-sm-offset-4">
+        <h6><a href="{% url 'about' %}">About</a></h6>
+      </div>
+      <div class="col-sm-1">
+        <h6><a href="{% url 'contact' %}">Contact</a></h6>
+      </div>
+      <div class="col-sm-1">
+        <h6><a href="{% url 'contribute' %}">Contribute</a></h6>
+      </div>
+      <div class="col-sm-1">
+        <h6>v{{ project_version }}</h6>
+      </div>
+    </div>
+  </footer>
