@@ -35,7 +35,14 @@ Get the code and enter the project directory,
 $ git clone https://github.com/bartromgens/django-project-template.git
 $ cd django-project-template
 ```
-
+Install dependencies that you will need
+```
+$ apt-get install virtualenv
+```
+or
+```
+$ pip install virtualenv
+```
 Install via the install script (creates a Python 3 virtualenv with dependencies, a local_settings.py file, and a sqlite database),
 ```
 $ ./install.sh
