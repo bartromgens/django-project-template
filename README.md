@@ -93,7 +93,7 @@ $ python manage.py test
 
 Run specific tests (example),
 ```
-$ python manage.py test website.test.TestCaseAdminLogin
+$ python manage.py test website.tests.TestCaseAdminLogin
 ```
 
 ## Logging
