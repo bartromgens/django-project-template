@@ -76,7 +76,7 @@ These are not under version control and you are free change these for your perso
 This is also the place for secret settings. An example, on which this file is based, is found in `website/local_settings_example.py`.
 
 #### Daily backups (cronjob)
-This project has a django-cronjob that makes daily backups of the raw database (includes everyting), and a json dump of the data.
+This project has a django-cronjob that makes daily backups of the raw database (includes everything), and a json dump of the data.
 These are defined in `website/cron.py`. The location of the backup files is defined in `website/local_settings.py`. 
 Create the following cronjob (Linux) to kickstart the `django-cron` jobs,
 ```
