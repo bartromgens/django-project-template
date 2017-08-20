@@ -3,11 +3,11 @@
 
 django-project-template is an example Django + bootstrap project with a basic project configuration that I often use. 
 
-Requires Python 3.4+ and Django 1.10+
+Requires Python 3.4+ and Django 1.11+
 
 #### Configuration
 
-- Django 1.10 and Bootstrap 3 
+- Django 1.11 and Bootstrap 3 
 - Example Django app, with empty views.py and models.py
 - Base page template with,
   - Top navbar with menu, sign up/log in, and user profile
