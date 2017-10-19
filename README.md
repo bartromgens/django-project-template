@@ -32,37 +32,59 @@ Requires Python 3.4+ and Django 1.11+
 
 Get the code and enter the project directory,
 ```
-$ git clone https://github.com/bartromgens/django-project-template.git
-$ cd django-project-template
+git clone https://github.com/bartromgens/django-project-template.git
+cd django-project-template
 ```
-Install dependencies that you will need
+
+Install dependencies that you will need,
 ```
-$ apt-get install virtualenv
+apt-get install virtualenv
 ```
 or
 ```
-$ pip install virtualenv
+pip install virtualenv
 ```
-Install via the install script (creates a Python 3 virtualenv with dependencies, a local_settings.py file, and a sqlite database),
+
+Make sure you have a recent version of pip,
 ```
-$ ./install.sh
+pip install --upgrade pip
+```
+
+Create a virtual environment,
+```
+virtualenv -p python3 env
 ```
 
 Activate the virtualenv (always do this before working on the project),
 ```
-$ source env/bin/activate
+source env/bin/activate
+```
+
+Install python packages in the local env,
+```
+pip install -r requirements.txt
+```
+
+Generate a `local_settings.py` file from the example,
+```
+python create_local_settings.py
+```
+
+Create a database (default is sqlite),
+```
+python manage.py migrate
 ```
 
 #### Create a superuser (optional)
 This allows you to login at the website as superuser and view the admin page,
 ```
-(env)$ python manage.py createsuperuser
+python manage.py createsuperuser
 ```
 
 #### Run a developement webserver
 Run the Django dev web server in the virtualenv (don't forget to active the virtualenv),
 ```
-(env)$ python manage.py runserver
+python manage.py runserver
 ```
 
 The website is now available at http://127.0.0.1:8000 and admin http://127.0.0.1:8000/admin.
@@ -88,12 +110,12 @@ $ crontab -e
 
 Run all tests,
 ```
-$ python manage.py test
+python manage.py test
 ```
 
 Run specific tests (example),
 ```
-$ python manage.py test website.tests.TestCaseAdminLogin
+python manage.py test website.tests.TestCaseAdminLogin
 ```
 
 ## Logging
