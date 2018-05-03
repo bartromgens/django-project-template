@@ -11,7 +11,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 INSTALLED_APPS = [
     'website',
     'exampleapp',
-    'bootstrap3',
+    'bootstrap4',
     'registration',
     'dbbackup',
     'django_cron',
