@@ -1,11 +1,3 @@
-html, body {
-  overflow-x: hidden;
-}
-
-body {
-  padding-top: 60px;
-}
-
 .vertical-spacer-20 {
     padding: 0;
     margin: 0;

@@ -1,43 +1,41 @@
-  <div class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/"><b>Project Name</b></a>
-      </div>
+  <a class="navbar-brand" href="/">Project Name</a>
 
-      <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-          <li><a href="/">MenuItem1</a></li>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-          <li><a href="/">MenuItem2</a></li>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+    </ul>
 
-        </ul>
-
-        <ul class="nav navbar-nav navbar-right">
-          {% if user.is_authenticated %}
-            <li class="dropdown">
-              <a href="/" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="/userprofile/{{ user.id }}/"><i class="glyphicon glyphicon-user"></i> {{ user.username }}</a></li>
-                <li><a href="/accounts/logout"><i class="glyphicon glyphicon-log-out"></i> Log out</a></li>
-                {% if user.is_superuser %}
-                <li role="presentation" class="divider"></li>
-                <li><a href="/admin"><i class="glyphicon glyphicon-wrench"></i> admin</a></li>
-                {% endif %}
-              </ul>
-            </li>
-          {% else %}
-            <li><a href="/accounts/login"><b>Log in</b></a></li>
-            <li><a href="/accounts/register"><b>Sign up</b></a></li>
+    <ul class="navbar-nav ml-auto">
+      {% if user.is_authenticated %}
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{ user.username }}
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/userprofile/{{ user.id }}/">Profile</a>
+          <a class="dropdown-item" href="/accounts/logout">Log out</a>
+          {% if user.is_superuser %}
+          <a class="dropdown-item" href="/admin">Admin</a>
           {% endif %}
-        </ul>
-      </div>
+        </div>
+      {% else %}
+      <li class="nav-item"><a class="nav-link" href="/accounts/login">Log in</a></li>
+      <li class="nav-item"><a class="nav-link" href="/accounts/register">Sign up</a></li>
+      {% endif %}
+    </ul>
 
-    </div>
   </div>
+
+</nav>

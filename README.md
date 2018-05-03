@@ -1,13 +1,13 @@
 # django-project-template
 [![Build Status](https://travis-ci.org/bartromgens/django-project-template.svg?branch=master)](https://travis-ci.org/bartromgens/django-project-template) [![Coverage Status](https://coveralls.io/repos/github/bartromgens/django-project-template/badge.svg?branch=master)](https://coveralls.io/github/bartromgens/django-project-template?branch=master) [![Dependency Status](https://gemnasium.com/badges/github.com/bartromgens/django-project-template.svg)](https://gemnasium.com/github.com/bartromgens/django-project-template)
 
-django-project-template is an example Django + bootstrap project with a basic project configuration that I often use. 
+django-project-template is an example Django 2 + Bootstrap 4 project with a basic project configuration.
 
-Requires Python 3.4+ and Django 1.11+
+Requires Python 3.4+ and Django 2.0+
 
 #### Configuration
 
-- Django 1.11 and Bootstrap 3 
+- Django 2.0 and Bootstrap 4
 - Example Django app, with empty views.py and models.py
 - Base page template with,
   - Top navbar with menu, sign up/log in, and user profile

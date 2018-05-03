@@ -4,14 +4,16 @@
 
 {% block content %}
 
-<div class="row" align="center">
-  <h3>About</h3>
-</div>
+<div class="container">
 
-<div class="row">
+  {% with page_title="About" %}
+  {% include "website/items/page_title.html" %}
+  {% endwith %}
 
-  <div class="col-sm-8 - col-sm-offset-2" align="left">
-    <p>This is an example about page.</p>
+  <div class="row">
+    <div class="col-sm-8 offset-sm-2">
+      <p>This is an example about page.</p>
+    </div>
   </div>
 
 </div>
